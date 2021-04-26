@@ -1,0 +1,13 @@
+<% if post.errors.present? %>
+  <% post.errors.full_messages.each do |message| %>
+    <%= message %>
+  <% end %>
+<% end %>
+
+<%= form_with model: post, local: true do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title, id: 'post_title' %>
+  <%= f.label :body %>
+  <%= f.text_area :body, id: 'post_body' %>
+  <%= f.submit nil, class: 'btn btn-primary' %>
+<% end %>
