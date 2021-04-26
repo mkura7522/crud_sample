@@ -1,0 +1,19 @@
+<h1>Posts#show</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= @post.title %></td>
+      <td><%= @post.body %></td>
+      <td><%= link_to 'Edit', edit_post_path(@post) %></td>
+      <td><%= link_to 'Destroy', @post, method: :delete, data: { confirm: "Are you sure?" } %></td>
+    </tr>
+  </tbody>
+</table>
+<%= link_to 'back', posts_path %>

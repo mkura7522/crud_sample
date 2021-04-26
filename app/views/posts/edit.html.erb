@@ -1,0 +1,10 @@
+<h1>Posts#edit</h1>
+
+<%= form_with model: @post, local: true do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title, id: 'post_title' %>
+  <%= f.label :body %>
+  <%= f.text_area :body, id: 'post_body' %>
+  <%= f.submit nil, class: 'btn btn-primary' %>
+<% end %>
+<%= link_to 'back', posts_path %>
