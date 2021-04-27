@@ -10,7 +10,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     if @post.save
-      redirect_to @task, notice: 'Created'
+      redirect_to @post, notice: 'Created'
     else
       render :new
     end
